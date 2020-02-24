@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/colorAccent"
+    android:gravity="center"
+    android:layout_margin="25dp"
+    android:orientation="vertical">
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="75dp"
+        android:layout_marginBottom="50dp"
+        android:text="Do you really want to exit ?"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/baloo"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/buttonshape"
+            android:text="Yes"
+            android:onClick="Yes"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="@font/baloo"
+            android:layout_margin="30dp"
+            android:textColor="@color/white" />
+
+
+
+
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/buttonshape"
+            android:layout_margin="30dp"
+            android:onClick="No"
+            android:fontFamily="@font/baloo"
+            android:text="No"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/white" />
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:orientation="vertical"-->
+<!--    android:background="@color/colorPrimary"-->
+<!--    android:paddingLeft="15dp"-->
+<!--    android:gravity="left"-->
+<!--    app:layout_anchorGravity="left"-->
+<!--    android:layout_gravity="left"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="300dp">-->
+
+
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:padding="10dp"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/profilePic"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginEnd="26dp"-->
+<!--            android:layout_marginRight="26dp"-->
+<!--            android:layout_marginBottom="15dp"-->
+<!--            android:orientation="vertical"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/name"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent">-->
+
+<!--            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                android:id="@+id/profilePicx"-->
+<!--                android:layout_width="120dp"-->
+<!--                android:layout_height="120dp"-->
+<!--                android:elevation="6dp"-->
+<!--                android:src="@mipmap/ic_launcher"-->
+<!--                app:civ_border_color="#ffff"-->
+<!--                app:civ_border_width="6dp" />-->
+<!--        </LinearLayout>-->
+
+
+
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/name"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center"-->
+<!--            android:text="ফারহান সাদিক গালিব"-->
+<!--            android:textColor="#fff"-->
+<!--            android:textSize="20dp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/profilePic"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/profilePic"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/profilePic" />-->
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/pod"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@font/bengali"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:gravity="center"-->
+<!--            android:text="পদঃ "-->
+<!--            android:textColor="#fff"-->
+<!--            android:textSize="16dp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/name" />-->
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/podtitle"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="2dp"-->
+<!--            android:fontFamily="@font/bengali"-->
+<!--            android:gravity="center"-->
+<!--            android:text="জেলা প্রশাসক"-->
+<!--            android:textColor="#fff"-->
+<!--            android:textSize="16dp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/pod"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/pod" />-->
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/contact"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@font/bengali"-->
+<!--            android:gravity="center"-->
+<!--            android:text="মোবাইল নংঃ"-->
+<!--            android:textColor="#fff"-->
+<!--            android:textSize="16dp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/pod" />-->
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/contactNo"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@font/bengali"-->
+<!--            android:gravity="center"-->
+<!--            android:text="01794937599"-->
+<!--            android:textColor="#fff"-->
+<!--            android:textSize="16dp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/contact"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/contact" />-->
+
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+
+
+<!--</LinearLayout>-->

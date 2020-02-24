@@ -13,7 +13,6 @@
             android:layout_height="380dp"
             android:adjustViewBounds="true"
             android:layout_alignParentTop="true"
-
             android:src="@drawable/giff" />
         <TextView
             android:id="@+id/can_we"

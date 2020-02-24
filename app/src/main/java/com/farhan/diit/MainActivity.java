@@ -23,6 +23,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private WebView webView;
+    AlertDialog alertDialog;
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,23 +50,29 @@ public class MainActivity extends AppCompatActivity {
         if (webView.canGoBack()){
             webView.goBack();
         }else {
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setMessage("Are you really want to exit ??").setCancelable(false).
-                    setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            finish();
-                         //   System.exit(0);
-                        }
-                    }).setNegativeButton("No", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    dialog.cancel();
-                }
-            });
-            AlertDialog alertDialog = builder.create();
-            alertDialog.show();
+//            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//            builder.setMessage("Do you really want to exit ?").setCancelable(false).
+//                    setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+//                        @Override
+//                        public void onClick(DialogInterface dialog, int which) {
+//                            finish();
+//                         //   System.exit(0);
+//                        }
+//                    }).setNegativeButton("No", new DialogInterface.OnClickListener() {
+//                @Override
+//                public void onClick(DialogInterface dialog, int which) {
+//                    dialog.cancel();
+//                }
+//            });
+//            AlertDialog alertDialog = builder.create();
+//            alertDialog.show();
 
+            ViewGroup viewGroup = findViewById(android.R.id.content);
+            View dialogView = LayoutInflater.from(this).inflate(R.layout.custom_alert_dialog, viewGroup, false);
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setView(dialogView);
+            alertDialog = builder.create();
+            alertDialog.show();
 
 
 
@@ -136,6 +143,19 @@ public class MainActivity extends AppCompatActivity {
         builder.setView(dialogView);
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
+
+    }
+
+    public void Yes(View view) {
+
+        finish();
+
+
+    }
+
+    public void No(View view) {
+
+        alertDialog.dismiss();
 
     }
 }

@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 public class SplashScreen extends AppCompatActivity {
 
-    int SPLASH_TIME = 3000;
+    int SPLASH_TIME = 1800;
     ProgressBar progressBar;
     int i;
 
@@ -37,7 +37,6 @@ public class SplashScreen extends AppCompatActivity {
                 //checking internet connectivity
                 for( i=0;i<networkInfo.length;++i){
                     if(networkInfo[i].getState()==NetworkInfo.State.CONNECTED){
-                        Toast.makeText(getApplicationContext(),"Internet Connected",Toast.LENGTH_LONG).show();
                         startActivity(new Intent(SplashScreen.this,MainActivity.class));
                         finish();
                         break;
@@ -45,8 +44,7 @@ public class SplashScreen extends AppCompatActivity {
                 }
 
                 if(i==networkInfo.length){
-                    Toast.makeText(getApplicationContext(),"Internet Not Connected",Toast.LENGTH_LONG).show();
-
+                    Toast.makeText(getApplicationContext(),"No Internet",Toast.LENGTH_LONG).show();
                     startActivity(new Intent(SplashScreen.this,NoInternetActivity.class));
                     finish();
 
@@ -60,6 +58,6 @@ public class SplashScreen extends AppCompatActivity {
     private void playProgress() {
 
         ObjectAnimator.ofInt(progressBar, "progress", 100)
-                .setDuration(2500).start();
+                .setDuration(200).start();
     }
 }
